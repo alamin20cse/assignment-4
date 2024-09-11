@@ -141,14 +141,36 @@ function calculateFinalScore(obj) {
 }
 
 
-// console.log(
-//     calculateFinalScore({ name: "Rajib", testScore: 45,  schoolGrade: 25, isFFamily : true  }));
 
-//     console.log(
-//         calculateFinalScore({ name: "Rajib", testScore: 45,  schoolGrade: 25, isFFamily : false }));
 
-// console.log(calculateFinalScore("hello"));
-// console.log(calculateFinalScore({ name: "Rajib", testScore: 15,  schoolGrade: 25, isFFamily : true  }));
+
+
+function  waitingTime(waitingTimes  , serialNumber) {
+
+     if(Array.isArray(waitingTimes)&& (typeof serialNumber ==="number"))
+     {
+
+        var len=waitingTimes.length;
+     var sum=0;
+     for(i of waitingTimes)
+     {
+        sum=sum+i;
+
+
+     }
+     var avg=Math.round(sum/len);
+     var x=serialNumber -(len+1);
+
+     var finalResult=x*avg;
+     return finalResult;
+     }
+     else
+     {
+        return "Invalid Input";
+     }
+   
+}
+
 
 
 
